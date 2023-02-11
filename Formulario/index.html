@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Crie seu evento</title>
+</head>
+<body>
+   <div class="page">
+    <header>
+        <h1>Crie e compartilhe seu evento.</h1>
+        <p>Aqui vem os inputs e a estrutura do form</p>
+   </header>
+   </div>
+   <form  id="formulario">
+        <fieldset>
+            <div class="fieldset">
+                <legend>Informações do evento</legend>
+                <div class="input-wrapper">
+                    <label for="event-title">Título do evento  <span>(Mínimo 8 caracteres)</span> </label>
+                    <input type="text" name="" id="event-title" required  minlength="8"> <!-- required no avisa q precisa preencher o campo-->
+                </div>                  <!--minlengh o minimo de cacteres digitado ele ira avisar-->
+                <div class="input-wrapper">
+                    <label for="event-link">Link do evento  <span>(Comece com https://)</span> </label>
+                    <input type="url" name="" id="event-link">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-Whatsapp">Whatsapp para contato  <span>(Somente números)</span> </label>
+                    <input type="number" name="" id="event-Whatsapp">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-info">Informação extra </label>
+                    <textarea id="event-info"></textarea>
+                </div>
+                <div class="input-wrapper" id="wrapper">
+
+                    <label for="event-category">Categoria </label>
+                    <select id="event-category">
+                        <option value="live">Ao vivo</option>
+                        <option value="podcast">Podcast</option>
+                        <option value="mentoria">Mentoria</option>
+                        
+                    </select>
+                   <img src="imagem/chevron-down-svgrepo-com.svg" width="50px" alt="">
+                </div>
+                
+            </div>
+
+
+        </fieldset>
+        <fieldset>
+            <div class="fieldset">
+                <legend>
+                    Privacidade
+                </legend>
+
+                <div class="input-wrapper">
+                    <label for="event-email">E-mail do administrador  <span>(digíte um email válido)</span> </label>
+                    <input type="email" name="" id="event-email">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-password">Senha de acesso para o participantes  <span>(minimo 8 caracteres)</span> </label>
+                    <input type="password" name="" id="event-password" required    minlength="8">
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" name="" id="event-private">
+                    <label for="event-private">Evento privado </label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="fieldset">
+                <legend>
+                    Dia e hora
+                </legend>
+
+               <div class="col-3">
+                <div class="input-wrapper">
+                    <label for="event-date">Data </label>
+                    <input type="date" name="" id="event-date">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-begin">das </label>
+                    <input type="time" name="" id="event-begin">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-end">até </label>
+                    <input type="time" name="" id="event-end">
+                </div>
+               </div>
+            </div>
+        </fieldset>
+
+   </form>
+   <footer >
+    <input form="formulario" class="button" type="submit" value="Salvar evento">
+   </footer>
+</body>
+</html>
